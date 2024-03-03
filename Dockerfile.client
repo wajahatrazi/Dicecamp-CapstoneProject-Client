@@ -2,6 +2,10 @@ FROM python:latest
 
 WORKDIR /app
 
-COPY client.py .
+COPY . .
 
-CMD ["python", "client.py"]
+RUN pip install --no-cache-dir pyopenssl==20.0.1
+
+ENV PORT=8000
+
+CMD ["python3", "client.py"]

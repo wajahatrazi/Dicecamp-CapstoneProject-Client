@@ -15,7 +15,7 @@ def calculate_checksum(file_path):
 def main():
     port = os.environ.get('PORT', 8000)
 
-    server_address = ('0.0.0.0', int(port))
+    server_address = ('cp-server', int(port))
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect(server_address)
